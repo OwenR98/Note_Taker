@@ -1,0 +1,11 @@
+C:\Users\OwenR\Source\Repos\Note_Taker\Note_Taker\bin\Debug\Note_Taker.exe.config
+C:\Users\OwenR\Source\Repos\Note_Taker\Note_Taker\bin\Debug\Note_Taker.exe
+C:\Users\OwenR\Source\Repos\Note_Taker\Note_Taker\bin\Debug\Note_Taker.pdb
+C:\Users\OwenR\Source\Repos\Note_Taker\Note_Taker\obj\Debug\Note_Taker.csproj.AssemblyReference.cache
+C:\Users\OwenR\Source\Repos\Note_Taker\Note_Taker\obj\Debug\Note_Taker.csproj.SuggestedBindingRedirects.cache
+C:\Users\OwenR\Source\Repos\Note_Taker\Note_Taker\obj\Debug\Note_Taker.MainFormFrame.resources
+C:\Users\OwenR\Source\Repos\Note_Taker\Note_Taker\obj\Debug\Note_Taker.Properties.Resources.resources
+C:\Users\OwenR\Source\Repos\Note_Taker\Note_Taker\obj\Debug\Note_Taker.csproj.GenerateResource.cache
+C:\Users\OwenR\Source\Repos\Note_Taker\Note_Taker\obj\Debug\Note_Taker.csproj.CoreCompileInputs.cache
+C:\Users\OwenR\Source\Repos\Note_Taker\Note_Taker\obj\Debug\Note_Taker.exe
+C:\Users\OwenR\Source\Repos\Note_Taker\Note_Taker\obj\Debug\Note_Taker.pdb
