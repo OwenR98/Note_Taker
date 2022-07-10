@@ -23,8 +23,8 @@ namespace Note_Taker
         /// <summary>
         /// On click of the save button, carry out this logic.
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        /// <param name="sender">No idea, Windows form stuff.</param>
+        /// <param name="e">Also no idea, Windows form stuff.</param>
         private void SaveButton_Click(object sender, EventArgs e)
         {
             // Get the current date and time when the file is saved.
