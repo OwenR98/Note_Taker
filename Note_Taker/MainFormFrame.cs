@@ -40,7 +40,7 @@ namespace Note_Taker
             // incorrect file path.
             currentDateTime = Regex.Replace(currentDateTime, @"/", "-");
 
-            // Create a new text file and name it using the above logic.
+            // Create a new text file and name it using the above logic.a
             // Then take the content of the main text area and put this into the text file.
             using (StreamWriter sw = File.CreateText(Path.Combine(filePath, currentDateTime)))
             {
