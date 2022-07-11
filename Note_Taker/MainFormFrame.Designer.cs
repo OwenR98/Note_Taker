@@ -30,6 +30,9 @@
         {
             this.TextArea = new System.Windows.Forms.TextBox();
             this.SaveButton = new System.Windows.Forms.Button();
+            this.ClearTextButton = new System.Windows.Forms.Button();
+            this.FolderBrowser = new System.Windows.Forms.FolderBrowserDialog();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.SuspendLayout();
             // 
             // TextArea
@@ -56,12 +59,28 @@
             this.SaveButton.UseVisualStyleBackColor = false;
             this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
+            // ClearTextButton
+            // 
+            this.ClearTextButton.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.ClearTextButton.Location = new System.Drawing.Point(3, 536);
+            this.ClearTextButton.Name = "ClearTextButton";
+            this.ClearTextButton.Size = new System.Drawing.Size(75, 23);
+            this.ClearTextButton.TabIndex = 2;
+            this.ClearTextButton.Text = "Clear Text";
+            this.ClearTextButton.UseVisualStyleBackColor = false;
+            this.ClearTextButton.Click += new System.EventHandler(this.ClearTextButton_Click);
+            // 
+            // FolderBrowser
+            // 
+            this.FolderBrowser.RootFolder = System.Environment.SpecialFolder.MyComputer;
+            // 
             // MainFormFrame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(1015, 560);
+            this.Controls.Add(this.ClearTextButton);
             this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.TextArea);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -76,6 +95,9 @@
 
         private System.Windows.Forms.TextBox TextArea;
         private System.Windows.Forms.Button SaveButton;
+        private System.Windows.Forms.Button ClearTextButton;
+        private System.Windows.Forms.FolderBrowserDialog FolderBrowser;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }
 

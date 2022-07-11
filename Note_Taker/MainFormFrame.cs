@@ -20,22 +20,24 @@ namespace Note_Taker
         /// <param name="e">Also no idea, Windows form stuff.</param>
         private void SaveButton_Click(object sender, EventArgs e)
         {
-            // Get the current date and time when the file is saved.
-            string currentDateTime = DateTime.Now.ToString() + ".txt";
-
-            // Magic filepath to the files folder for now, this will change in the future.
-            string filePath = @"C:\Users\OwenR\source\repos\Note_Taker\Files\";
-
-            // Replace all colons with hyphens as the file path wont accept colons.
-            currentDateTime = Regex.Replace(currentDateTime, @":", "-");
-
-            // Replace all forward slashes in the datetime with hyphens as it reads this as back slashes which returns an
-            // incorrect file path.
-            currentDateTime = Regex.Replace(currentDateTime, @"/", "-");
+            // set the default extension as .txt.
+            string userDecidedPath;
+            saveFileDialog1.DefaultExt = ".txt";
+            saveFileDialog1.AddExtension = true;
+            
+            // Ensure the file path is valid, if it is then use it.
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                userDecidedPath = saveFileDialog1.FileName;
+            }
+            else
+            {
+                throw new Exception($"The file path '{saveFileDialog1.FileName}' was not valid, please try again.");
+            }
 
             // Create a new text file and name it using the above logic.
             // Then take the content of the main text area and put this into the text file.
-            using (StreamWriter sw = File.CreateText(Path.Combine(filePath, currentDateTime)))
+            using (StreamWriter sw = File.CreateText(userDecidedPath))
             {
                 string strVal;
 
@@ -43,6 +45,16 @@ namespace Note_Taker
 
                 sw.WriteLine(strVal);
             }
+        }
+
+        /// <summary>
+        /// On click of the clear text button, wipe all text from the textarea.
+        /// </summary>
+        /// <param name="sender">Microsoft stuff.</param>
+        /// <param name="e">More Microsoft stuff.</param>
+        private void ClearTextButton_Click(object sender, EventArgs e)
+        {
+            TextArea.Text = "";
         }
     }
 }
