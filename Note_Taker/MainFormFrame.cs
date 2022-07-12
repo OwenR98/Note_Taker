@@ -26,13 +26,18 @@ namespace Note_Taker
             saveFileDialog1.AddExtension = true;
             
             // Ensure the file path is valid, if it is then use it.
-            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            switch (saveFileDialog1.ShowDialog())
             {
-                userDecidedPath = saveFileDialog1.FileName;
-            }
-            else
-            {
-                throw new Exception($"The file path '{saveFileDialog1.FileName}' was not valid, please try again.");
+                case DialogResult.OK:
+                    userDecidedPath = saveFileDialog1.FileName;
+                    break;
+
+                case DialogResult.Cancel:
+                    return;
+
+                default:
+                    throw new Exception($"The file path '{saveFileDialog1.FileName}' was not valid, please try again.");
+
             }
 
             // Create a new text file and name it using the above logic.
